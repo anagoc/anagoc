@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" type ="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container">
+<h3>Installing the client library</h3>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#csharpptab" role="tab" data-toggle="tab">C#</a></li>
+  <li><a href="#javatab" role="tab" data-toggle="tab">Java</a></li>
+  <li><a href="#gotab" role="tab" data-toggle="tab">Go</a></li>
+  <li><a href="#nodetab" role="tab" data-toggle="tab">Node.js</a></li>
+
+  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">More languages <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#phptab" role="tab" data-toggle="tab">PHP</a></li>
+                <li><a href="#pytab" role="tab" data-toggle="tab">Python</a></li>
+                <li><a href="#swifttab" role="tab" data-toggle="tab">Swift</a></li>
+                <li><a href="#cplustab" role="tab" data-toggle="tab">C++</a></li>
+                <li><a href="#typetab" role="tab" data-toggle="tab">TypeScript</a></li>
+            </ul>
+  </li>
+
+</ul>
+</li>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="csharpptab"><p>
+    For more information, see Setting Up a C# Development Environment.
+
+If you are using Visual Studio 2017 or higher, open nuget package manager window and type the following:  <pre class="notranslate" suppresswarning="suppresswarning" dir="ltr" is-upgraded="">Install-Package Google.Apis</pre> If you are using .NET Core command-line interface tools to install your dependencies, run the following command:
+<pre class="notranslate" suppresswarning="suppresswarning" dir="ltr" is-upgraded="">dotnet add package Google.Apis</pre>  </p></div>
+  <div class="tab-pane" id="javatab"><p>
+    For more information, see Setting Up a Java Development Environment.
+
+If you are using Maven, add the following to your pom.xml file. For more information about BOMs, see The Google Cloud Platform Libraries BOM.
+<code>  <pre>
+    <dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>libraries-bom</artifactId>
+      <version>24.1.2</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20211205</version>
+  </dependency>
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-speech</artifactId>
+  </dependency>
+</dependencies>
+    </pre> </code>  </p> If you are using Gradle, add the following to your dependencies: <pre>
+      <code>
+        implementation platform('com.google.cloud:libraries-bom:24.2.0')
+
+        implementation 'com.google.cloud:google-cloud-speech'
+      </code>
+      </pre>
+      If you are using sbt, add the following to your dependencies:
+      <code><pre>
+        libraryDependencies += "com.google.cloud" % "google-cloud-speech" % "2.2.2"
+      </pre></code>
+      If you're using Visual Studio Code, IntelliJ, or Eclipse, you can add client libraries to your project using the following IDE plugins:
+<ul>
+<li>
+  Cloud Code for VS Code
+  </li>
+<li>Cloud Code for IntelliJ</li>
+<li>Cloud Tools for Eclipse</li>  </ul>
+The plugins provide additional functionality, such as key management for service accounts. Refer to each plugin's documentation for details.
+
+  </div>
+  <div class="tab-pane" id="gotab">For more information, see Setting Up a Go Development Environment.
+  <code><pre>
+    go get cloud.google.com/go/speech/apiv1
+  </pre></code></div>
+  <div class="tab-pane" id="nodetab">For more information, see Setting Up a Node.js Development Environment. <pre>
+    <code>npm install --save @google-cloud/speech</code>
+  </pre></div>
+
+  <div class="tab-pane" id="phptab">For more information, see Using PHP on Google Cloud. <pre>
+    <code>composer require google/apiclient</code>
+  </pre> </div>
+  <div class="tab-pane" id="pytab">For more information, see Setting Up a Python Development Environment.<code><pre>
+    pip install --upgrade google-cloud-speech
+  </pre></code>
+  </div>
+  <div class="tab-pane" id="swifttab">Swift content here</div>
+  <div class="tab-pane" id="cplustab">C++ content here</div>
+  <div class="tab-pane" id="typetab">TypeScript content here</div>
+
+</div>
+
+</body>
+</html>
